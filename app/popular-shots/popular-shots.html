@@ -1,1 +1,38 @@
-Aqui vai a brincadeira
+<h3>The Most Popular Shots</h3>
+<br />
+<div class="text-center">
+	<div class="row">
+	  <div ng-repeat="shot in shots" class="col-xs-12 col-sm-4 col-md-3">
+	  	<div class='img-container' ng-click="selectShot(shot)" data-toggle="modal" data-target="#myModal">
+		  	<div class='img-text'>{{shot.title}}</div>
+		  	<img src="{{shot.images.teaser}}" class="img-thumbnail" />
+		  </div>
+	  </div>
+	</div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">{{selectedShot.title}}</h4>
+      </div>
+      <div class="modal-body">
+      	<div class="text-center">
+        	<img class='img-rounded img-selected' src="{{selectedShot.images.hidpi ? selectedShot.images.hidpi : selectedShot.images.normal}}" class="img-thumbnail" />
+      	</div>
+        <br />
+        <img class="img-circle author-avatar" src="{{selectedShot.user.avatar_url ? selectedShot.user.avatar_url : ''}}">
+        <b>{{selectedShot.user.name}}</b>
+        <br />
+        <br />
+        <p ng-bind-html="selectedShot.description"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
