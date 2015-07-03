@@ -28,14 +28,13 @@ angular.module('myApp.popularShots', ['ngRoute', 'ngSanitize'])
 
 	// Scoped Methods ------------------------------------------
 	$scope.selectShot = function(shot) {
-		$scope.selectedShot = null;
 		$scope.selectedShot = shot;
 	};
 
 	$scope.navigateTo = function(pageNumber) {
 		$scope.currentPage = pageNumber;
 		invokeQuery();
-	}
+	};
 
 	// Private Methods -----------------------------------------
 	function invokeQuery() {
@@ -43,13 +42,17 @@ angular.module('myApp.popularShots', ['ngRoute', 'ngSanitize'])
 				postQueryProcessing(data, header);
 			}
 		);
-	}
+	};
 
 	function postQueryProcessing(data, header) {
 		$scope.shots = data;
-		$scope.hasPrevLink = header('link').search('rel="prev"') >= 0 ? true : false;
-		$scope.hasNextLink = header('link').search('rel="next"') >= 0 ? true : false;
-	}
+		var headerLink = header('link');
+
+		if(headerLink) {
+			$scope.hasPrevLink = headerLink.search('rel="prev"') >= 0 ? true : false;
+			$scope.hasNextLink = headerLink.search('rel="next"') >= 0 ? true : false;
+		}
+	};
 
 	/* 	Chamada ao construtor -----------------------------------
 			Estah no final para garantir o carregamento de todos os metodos
