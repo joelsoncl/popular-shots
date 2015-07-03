@@ -26,7 +26,7 @@ angular.module('myApp.popularShots', ['ngRoute', 'ngSanitize'])
 		invokeQuery();
 	};
 
-	// Scope Methods -------------------------------------------
+	// Scoped Methods ------------------------------------------
 	$scope.selectShot = function(shot) {
 		$scope.selectedShot = null;
 		$scope.selectedShot = shot;
