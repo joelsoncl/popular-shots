@@ -11,6 +11,13 @@
 	</div>
 </div>
 
+<br />
+
+<div class="text-center">
+  <span type="button" class="navigation-button glyphicon glyphicon-circle-arrow-left" ng-show="hasPrevLink" ng-click="navigateTo(currentPage - 1)"></span>
+  <span type="button" class="navigation-button glyphicon glyphicon-circle-arrow-right" ng-show="hasNextLink" ng-click="navigateTo(currentPage + 1)"></span>
+</div>
+
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
@@ -26,7 +33,6 @@
         <br />
         <img class="img-circle author-avatar" src="{{selectedShot.user.avatar_url ? selectedShot.user.avatar_url : ''}}">
         <b>{{selectedShot.user.name}}</b>
-        <br />
         <br />
         <p ng-bind-html="selectedShot.description"></p>
       </div>

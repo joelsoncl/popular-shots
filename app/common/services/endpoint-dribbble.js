@@ -6,7 +6,7 @@ angular.module('myApp.dribbbleServices', ['ngResource'])
 
 .factory('Shot', ['$resource',
   function($resource){
-    return $resource('https://api.dribbble.com/v1/shots?:access_token', {}, {
+    return $resource('https://api.dribbble.com/v1/shots?:access_token&page=:pageNumber', {}, {
       query: {method:'GET', params:{access_token:ACCESS_TOKEN_PARAM}, isArray:true}
     });
   }
