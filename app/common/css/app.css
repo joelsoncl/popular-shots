@@ -2,10 +2,17 @@
 
 .img-container {
 	min-width: 180px;
+  min-height: 150px;
 	cursor: pointer;
   position: relative;
   display: inline-block;
   margin: 5px;
+}
+.img-container:hover img {
+  transform: scale(1.03);
+  transition: transform .15s ease;
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  border: 1px solid rgba(81, 203, 238, 1);
 }
 .img-text {
   bottom: 0px;
@@ -13,7 +20,7 @@
   min-width: 130px;
   height: 40px;
   position: absolute;
-  background-color: black;
+  background-color: #000000;
   display: block;
   vertical-align: middle;
   word-wrap: break-word;
@@ -27,7 +34,7 @@
   display: flex;
 	justify-content: center;
 	align-items: center;
-	color: white;
+	color: #FFFFFF;
 }
 .img-selected {
 	max-width: 100%;

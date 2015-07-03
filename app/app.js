@@ -7,8 +7,14 @@ angular.module('myApp', [
   'ngSanitize',
   'myApp.popularShots',
   'myApp.dribbbleServices',
+  'angular-loading-bar',
   'myApp.version'
-]).
-config(['$routeProvider', function($routeProvider) {
+])
+
+.config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/popular-shots'});
+}])
+
+.config(['cfpLoadingBarProvider', function(cfpLoadingBarProvider) {
+    cfpLoadingBarProvider.includeSpinner = false;
 }]);
