@@ -2,7 +2,7 @@
 
 var ACCESS_TOKEN_PARAM="access_token=2399f6e03f2c03e028113a3ebc765181a0c1f657a5985237331c2366e2c28544";
 
-angular.module('myApp.dribbbleServices', ['ngResource'])
+angular.module('dribbbleService', ['ngResource'])
 
 .factory('Shot', ['$resource',
   function($resource){

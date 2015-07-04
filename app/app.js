@@ -5,16 +5,16 @@ angular.module('myApp', [
   'ngRoute',
   'ngResource',
   'ngSanitize',
-  'myApp.popularShots',
-  'myApp.dribbbleServices',
   'angular-loading-bar',
-  'myApp.version'
+  'myApp.popularShots',
+  'dribbbleService'
 ])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/popular-shots'});
 }])
 
+// Configuracao para remocao do 'spinner' que concorre com a 'load bar'
 .config(['cfpLoadingBarProvider', function(cfpLoadingBarProvider) {
     cfpLoadingBarProvider.includeSpinner = false;
 }]);
