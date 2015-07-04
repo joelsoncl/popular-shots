@@ -64,6 +64,7 @@ Os browsers usados em tempo de desenvolvimento foram:
 * Chrome Versão 43.0.2357.124
 * Firefox 38.0.5
 * Internet Explorer 11.0.9600
+
 Observação: O IE constou problemas com certificados, mas ignorando, funcionou normalmente.
 
 Para debug e inspeção, usei o [Chrome DevTools](https://developer.chrome.com/devtools). Através do DevTools também emulei diversos ambientes mobile diferentes.
@@ -88,7 +89,7 @@ Não vi a necessidade de configurar o deploy a cada fim de rodada da integraçã
 
 Não compressei/minifiquei os arquivos próprios da aplicação pela natureza do projeto, pois assim pode haver uma depuração mais transparente, se desejado.
 
-Despejei o conteúdo produzido em um WWW através de um cliente FTP e redirecionei o domínio `http://www.joelsonlucena.com` para lá.
+Despejei o conteúdo produzido em um WWW através de um cliente FTP e redirecionei o domínio [`]http://www.joelsonlucena.com](http://www.joelsonlucena.com) para lá.
 
 
 ### **Finalizando** ###
