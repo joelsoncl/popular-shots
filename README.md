@@ -1,6 +1,6 @@
 # popular-shots
 
-Acesse a [popular-shots](http://joelsonlucena.com) por aqui.
+Acesse a [popular-shots](http://joelsonlucena.com) por [aqui](http://joelsonlucena.com).
 
 Esta aplicação é uma consumidora de dados do [Dribbble](https://dribbble.com/) que tem por sua simples função mostrar apenas os 'Shots' mais populares e seus detalhes.
 
@@ -31,7 +31,7 @@ Para rodar os testes "end to end":
 Pronto! Está pronto para brincar! =)
 
 
-# Sobre as Escolhas (Daqui para baixo, apenas importa aos meus avaliadores)
+### **Sobre as Escolhas (Daqui para baixo, apenas importa aos meus avaliadores)** ###
 
 Como eu não conhecia o Dribbble, então a primeira coisa que decidi fazer foi estudar basicamente sua proposta e sua API de exposição de dados. Nesse momento aproveitei e fiz os dois cadastros: pessoal e de uso pela aplicação.
 
@@ -48,9 +48,49 @@ Há uma plataforma bem legal chamada Yeoman (uso em outro projeto), que otimiza 
 
 Escolhi usar o Twitter Bootstrap para trabalhar a interface com usuário e as questões de responsividade das telas.
 
-
 Com relação ao ambiente de desenvolvimento, não precisei investir muito tempo por já ter boa parte do que precisava configurado.
+
+### **Ferramentas e Decisões Técnicas Durante o Desenvolvimento** ###
+
+Não criei branchs no projeto para esta prmeira e única release por não estar configurada uma situação onde houvesse essa necessidade (desenvolvimentos paralelos, diferentes versões, hotfix, etc.)
+
+Procurando o serviço que me retornaria os Shots mais populares e fazendo testes com o retorno do serviço, descobri que por padrão o serviço já retorna os mais populares. Senti falta dessa informação na API. Usei o SoapUI para criar MOCK clients.
+
+Como IDE, usei o Sublime Text. Easy and cool! \o/
+
+Os browsers usados em tempo de desenvolvimento foram:
+* Chrome Versão 43.0.2357.124
+* Firefox 38.0.5
+* Internet Explorer 11.0.9600
+Observação: O IE constou problemas com certificados, mas ignorando, funcionou normalmente.
+
+Para debug e inspeção, usei o Chrome DevTools. Através do DevTools também emulei diversos ambientes mobiles diferentes.
+
+
+### **Não deu tempo...** ###
+
+Ao sabor como de qualquer apaixonado pelo que faz, senti falta de investimento em algumas melhorias. Realmente o tempo ficou apertado e não pude fazer tudo o que queria. Para pontuar algumas coisas que foram deixadas pendentes:
+* Terminar de tratar as exceções que podem ser lançadas no consumo do serviço. hoje apenas calei para não culminar em quebra de funcionamento, mas o ideal é tratar cada tipo de erro que for necessário.
+* Terminar os testes. Sabendo que o tempo estava apertado para tudo o que tinha pendente, desinvesti na cobertura ideal dos testes para entregar a funcionalidade. Com certeza isso é muito arriscado, mas não tive como deixar de assumir esse risco.
+* Apesar de não ser especialista em UX, gosto de fazer o melhor possível. Acredito que poderia ter melhorado bastante a usabilidade, identidade visual (que não investi nisso) e a responsividade. Tudo isso está funcional, mas sindo longe do que considero ideal.
+
+
+### **Integração Contínua** ###
+
+Associei meu repositório do Git ao Travis CI e ele está realizando o build a cada novo push.
+
+Não vi a necessidade de configurar o deploy a cada fim de rodada da integração contínua, mas se o fizesse, a princípio usaria o CloudBees para isso.
+
 
 ### **Sobre o Deploy** ###
 
 Não compressei/minifiquei os arquivos próprios da aplicação pela natureza do projeto, pois assim pode haver uma depuração mais transparente, se desejado.
+
+Despejei o conteúdo produzido em um WWW através de um cliente FTP e redirecionei o domínio `http://www.joelsonlucena.com` para lá.
+
+
+### **Finalizando** ###
+
+Gostei bastante de participar do desafio. Espero que tenham gostado do resultado e do resumão do que foi este período para mim. Fico na expectativa da resposta!
+
+Um grande abraço e fiquem com Deus! =D
