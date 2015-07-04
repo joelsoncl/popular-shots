@@ -48,6 +48,11 @@
 }
 
 .navigation-button {
-  font-size: 2.5em;
+  font-size: 3em;
+  color: #707070;
   cursor: pointer;
+}
+
+.navigation-button:hover {
+  color: #383838;
 }
