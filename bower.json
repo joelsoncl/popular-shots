@@ -1,8 +1,8 @@
 {
-  "name": "The Most Popular Shots",
-  "description": "A project that call a service from Dribbble and show the most popular shots",
-  "version": "1.0.0",
-  "homepage": "https://github.com/joelsoncl/popular-shots",
+  "name": "angular-seed",
+  "description": "A starter project for AngularJS",
+  "version": "0.0.0",
+  "homepage": "https://github.com/angular/angular-seed",
   "license": "MIT",
   "private": true,
   "dependencies": {
