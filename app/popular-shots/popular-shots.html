@@ -1,12 +1,14 @@
 <h3>The Most Popular Shots</h3>
 
 <div class="text-center">
-	<div class="row">
-	  <div ng-repeat="shot in shots" class="col-xs-12 col-sm-4 col-md-3">
+	<div>
+	  <div ng-repeat="shot in shots" class="col-sm-6 col-md-3">
 	  	<div class='img-container' ng-click="selectShot(shot)" data-toggle="modal" data-target="#myModal">
 		  	<div class='img-text'>{{shot.title}}</div>
 		  	<img src="{{shot.images.teaser}}" class="img-thumbnail" />
 		  </div>
+      <br />
+      <br />
 	  </div>
 	</div>
 </div>
@@ -32,7 +34,7 @@
       	</div>
         <br />
         <img class="img-circle author-avatar" src="{{selectedShot.user.avatar_url ? selectedShot.user.avatar_url : ''}}">
-        <b>{{selectedShot.user.name}}</b>
+        <b><a href="{{selectedShot.user.html_url}}" target="_blank">{{selectedShot.user.name}}</a></b>
         <br />
         <br />
         <p ng-bind-html="selectedShot.description"></p>

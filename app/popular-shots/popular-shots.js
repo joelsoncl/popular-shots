@@ -38,8 +38,19 @@ angular.module('myApp.popularShots', ['ngRoute', 'ngSanitize'])
 
 	// Private Methods -----------------------------------------
 	function invokeQuery() {
-		Shot.query({pageNumber: $scope.currentPage}, function(data, header) {
+		Shot.query({pageNumber: $scope.currentPage},
+			function(data, header) {
 				postQueryProcessing(data, header);
+			},
+			function(error) {
+				/* 	TODO
+						Uma das regras do contrato do servico sendo consumido eh que
+						existe um numero limite de chamadas em um determinado periodo
+						de tempo, o que ao exceder, retorna um erro para aplicacao.
+						Se esse erro nao for capturado, pode quebrar o funcionamento,
+						entao capturei e, posteriormente, farei um tratamento desse
+						erro para a notificacao do usuario (dependendo do erro).
+				*/
 			}
 		);
 	};
