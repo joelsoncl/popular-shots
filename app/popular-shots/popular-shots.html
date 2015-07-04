@@ -30,7 +30,7 @@
       </div>
       <div class="modal-body">
       	<div class="text-center">
-        	<img class='img-rounded img-selected' src="{{selectedShot.images.hidpi ? selectedShot.images.hidpi : selectedShot.images.normal}}" class="img-thumbnail" />
+          <a href="{{selectedShot.images.hidpi ? selectedShot.images.hidpi : selectedShot.images.normal}}" target="_blank"><img class='img-rounded img-selected' src="{{selectedShot.images.hidpi ? selectedShot.images.hidpi : selectedShot.images.normal}}" class="img-thumbnail" /></a>
       	</div>
         <br />
         <img class="img-circle author-avatar" src="{{selectedShot.user.avatar_url ? selectedShot.user.avatar_url : ''}}">
