@@ -89,7 +89,7 @@ Não vi a necessidade de configurar o deploy a cada fim de rodada da integraçã
 
 Não compressei/minifiquei os arquivos próprios da aplicação pela natureza do projeto, pois assim pode haver uma depuração mais transparente, se desejado.
 
-Despejei o conteúdo produzido em um WWW através de um cliente FTP e redirecionei o domínio [`]http://www.joelsonlucena.com](http://www.joelsonlucena.com) para lá.
+Despejei o conteúdo produzido em um WWW através de um cliente FTP e redirecionei o domínio [http://www.joelsonlucena.com](http://www.joelsonlucena.com) para lá.
 
 
 ### **Finalizando** ###
