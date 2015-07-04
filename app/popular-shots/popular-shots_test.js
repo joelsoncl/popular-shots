@@ -94,6 +94,15 @@ describe('myApp module', function() {
 	      $scope.selectShot($scope.shots[0]);
 	      expect($scope.selectedShot.id).toEqual(WEB_SERVICE_RESPONSE_MOCK[0].id);
 	    });
+
+      it('should test the constructor', function() {
+        // TODO
+      });
+
+      it('should test web service unavailability', function() {
+        // TODO
+      });
+
     });
 
 	});
