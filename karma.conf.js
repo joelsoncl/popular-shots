@@ -14,7 +14,6 @@ module.exports = function(config){
       'app/bower_components/angular-sanitize/angular-sanitize.js',
       'app/bower_components/bootstrap/dist/js/bootstrap.js',
       'app/*.js',
-      'app/components/**/*.js',
       'app/popular-shots/*.js',
       'app/common/services/*.js'
     ],
